@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="flex">
+    <h1>Rock Paper Scissors</h1>
+    <h2>Choose Your Weapon</h2>
+    <h3>Best Out of 5 Wins!</h3>
+
+   
+    <div class="optionBtn">
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+    </div>
+
+    <div class="labels">
+      <span id="playerLabel">Player scores</span>
+      <span id="compLabel">Computer scores</span>
+    </div>
+    
+
+    <div class="scores">
+      <div id="playerScore"></div>
+      <div id="computerScore"></div>
+    </div>
+
+  <div><span id="resultsLabel">Results</label></div>
+    
+
+    <div id="roundResults"></div>
+
+  <div>
+    <button id="reset">Play Again!</button>
+  </div>
+   
+  </div>
+</body>
+<script src ="javascript.js"></script>  
+</html>
+
+
+
+
+<!-- OLD SCRIPT
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Rock Paper Scissors</title>
+    <body>
+     
+
+   <script>
+
+   // step 3 - randomly return R/P/S 
+
+   let choices = ['Rock', 'Paper', 'Scissors'];
+
+    function computerPlay () {
+      let result = choices[Math.floor(Math.random() * choices.length)];
+      return result;
+    }
+
+    // step 4 - function that plays 1 round R/P/S, and returns string
+
+    
+
+    function playRound (playerChoice, computerChoice) {
+
+    let playerSelection = prompt("Choose: Rock/Paper/Scissors",'');
+
+    let computerSelection = computerPlay();
+
+    if (playerSelection.toLowerCase() == "Rock".toLowerCase()) {
+        if (computerSelection === "Scissors") {
+            ++playerScore
+          return "You win! Rock beats Scissors.";
+        }else if(computerSelection === "Paper"){
+            ++compScore
+          return "You lose! Paper beats rock.";
+        }else {
+          return "Tie!"
+        }
+    }else if (playerSelection.toLowerCase() === "Paper".toLowerCase()) {
+      if (computerSelection === "Scissors") {
+            ++compScore
+          return "You lose! Scissors beats Paper!";
+        }else if (computerSelection === "Rock") {
+            ++playerScore
+          return "You win! Paper beats Rock!";
+        }else if(computerSelection === "Paper"){
+          return "Tie!";
+        }
+    }else if(playerSelection.toLowerCase() === "Scissors".toLowerCase()) {
+      if (computerSelection === "Rock") {
+            ++compScore
+          return "You lose! Rock beats Scissors!";
+        }else if (computerSelection === "Paper") {
+            ++playerScore
+          return "You win! Paper beats Rock!";
+        }else {
+          return "Tie!"
+        }
+    }
+  }
+
+   function game() {
+     console.log (playRound());
+     console.log (playRound());
+     console.log (playRound());
+     console.log (playRound());
+     console.log (playRound());
+
+     if (playerScore > compScore) {
+         return "You Win the game!!!!";
+     }else if (playerScore < compScore) {
+         return "You Lost the game to a computer!";
+     }else {
+         return "It's a Draw!";
+     }
+    }
+
+    let playerScore = 0;
+    let compScore = 0;
+
+
+   </script>
+
+
+
+    </body>
+    </head>
+</html>
+
+-->

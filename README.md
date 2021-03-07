@@ -11,4 +11,4 @@ It took me another 18 hours to add the HTML/CSS/Edit DOM  and add events
 View complete project in browser. 
 
 
-https://graceschwar.github.io/Project-Rock-Paper-Scissors/
+https://catqueencodes.github.io/Project-Rock-Paper-Scissors/
